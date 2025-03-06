@@ -1,0 +1,31 @@
+# Core dependencies
+torch>=2.0.0
+transformers>=4.49.0  # Newer version required for compatibility
+huggingface_hub>=0.26.0
+pillow>=9.5.0
+numpy>=1.24.0
+
+# Video processing
+opencv-python>=4.8.0
+decord>=0.6.0  # Optional but recommended for better video handling
+ffmpeg-python
+imageio_ffmpeg>=0.6.0 
+moviepy>=2.1.2
+
+# Qwen model dependencies
+tokenizers>=0.15.0
+safetensors>=0.3.1
+accelerate>=0.21.0
+
+# Specialized dependencies 
+autoawq==0.2.8  # Use this specific version that's available
+flash-attn>=2.0.0;platform_system!="Darwin"  # Optional for performance, exclude on MacOS
+
+# For error handling and utilities
+tqdm>=4.65.0
+psutil>=5.9.5
+packaging>=23.1
+
+# Specify this to allow newer transformers with autoawq
+--find-links https://github.com/huggingface/transformers/releases 
+

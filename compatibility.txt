@@ -1,0 +1,19 @@
+# Compatibility reference for ComfyUI-IF_VideoPrompts dependencies
+# Use this as a reference when troubleshooting dependency issues
+
+# Compatible version combinations:
+# Set 1 (Recommended):
+transformers==4.49.0
+autoawq==0.2.8
+torch>=2.0.0
+
+# Set 2 (Latest - may require testing):
+transformers==4.50.0+
+autoawq==0.2.8
+torch>=2.0.0
+
+# IMPORTANT: transformers 4.48.0 and earlier versions DO NOT work correctly with this extension
+# IMPORTANT: When installing autoawq, use pip install --no-deps autoawq==0.2.8 to prevent transformers downgrade
+
+# Note: When installing, always install transformers first, then autoawq with --no-deps
+# Example: pip install transformers==4.49.0 && pip install --no-deps autoawq==0.2.8 
