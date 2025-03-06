@@ -163,3 +163,13 @@ python install.py
 This extension uses the following components:
 - [Qwen2.5-VL](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) models from Alibaba
 - [Video Helper Suite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite) for frame extraction 
+
+
+Support
+If you find this tool useful, please consider supporting my work by:
+
+Starring the repository on GitHub: ComfyUI-IF_VideoPrompts
+Subscribing to my YouTube channel: Impact Frames
+Follow me on X: Impact Frames X
+Thank You!
+<img src="https://count.getloli.com/get/@IFAIVideoPrompts_comfy?theme=moebooru" alt=":IFAIVideoPrompts_comfy" />
