@@ -1,0 +1,44 @@
+[project]
+name = "comfyui-if_videoprompts"
+description = "ComfyUI extension for video-based prompting and processing with support for various models and video processing capabilities"
+version = "0.1.1"
+license = { file = "LICENSE.txt" }
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.49.0",
+    "huggingface_hub>=0.26.0",
+    "pillow>=9.5.0",
+    "numpy>=1.24.0",
+    "opencv-python>=4.8.0",
+    "decord>=0.6.0",
+    "ffmpeg-python",
+    "imageio_ffmpeg>=0.6.0",
+    "moviepy>=2.1.2",
+    "tokenizers>=0.15.0",
+    "safetensors>=0.3.1",
+    "accelerate>=0.21.0",
+    "autoawq==0.2.8",
+    "tqdm>=4.65.0",
+    "psutil>=5.9.5",
+    "packaging>=23.1",
+]
+
+[project.optional-dependencies]
+flash-attn = ["flash-attn>=2.0.0"]
+
+[project.urls]
+Repository = "https://github.com/if-ai/ComfyUI-IF_VideoPrompts"
+
+# Used by Comfy Registry https://comfyregistry.org
+[tool.comfy]
+PublisherId = "impactframes"
+DisplayName = "ComfyUI-IF_VideoPrompts"
+Icon = "https://impactframes.ai/System/Icons/48x48/if.png"
+
+[build-system]
+requires = ["setuptools>=42.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Note regarding flash-attn:
+# The flash-attn dependency is moved to optional-dependencies as it's 
+# not compatible with MacOS (Darwin) systems
