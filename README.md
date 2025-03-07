@@ -151,6 +151,11 @@ pip install transformers==4.49.0
 pip install --no-deps autoawq==0.2.8
 ```
 
+if you have some fuckery with the LD_libray whatever do:
+```
+pip uninstall bitsandbytes -y
+pip install bitsandbytes
+```
 ### Missing Dependencies
 
 If you're missing dependencies, use the installation script:
