@@ -2,7 +2,7 @@
 name = "comfyui-if_videoprompts"
 description = "ComfyUI extension for video-based prompting and processing with support for various models and video processing capabilities"
 version = "0.1.0"
-license = { file = "LICENSE.txt" }
+license = { file = "LICENSE.md" }
 dependencies = [
     "torch>=2.0.0",
     "transformers>=4.49.0",
