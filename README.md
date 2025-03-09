@@ -55,7 +55,10 @@ pip uninstall -y autoawq transformers
 pip install transformers==4.49.0
 
 # Install compatible autoawq version WITHOUT dependencies to prevent transformers downgrade
-pip install --no-deps autoawq==0.2.8
+# If you want to use AWQ to save VRAM and up to 3x faster inference
+# you need to install triton and autoawq
+
+
 
 # Then install other dependencies
 pip install -r requirements.txt
