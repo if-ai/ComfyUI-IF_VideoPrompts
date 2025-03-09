@@ -32,7 +32,7 @@ Repository = "https://github.com/if-ai/ComfyUI-IF_VideoPrompts"
 # Used by Comfy Registry https://comfyregistry.org
 [tool.comfy]
 PublisherId = "impactframes"
-DisplayName = "IF_VideoPrompts"
+DisplayName = "video prompts"
 Icon = "https://impactframes.ai/System/Icons/48x48/if.png"
 
 [build-system]
