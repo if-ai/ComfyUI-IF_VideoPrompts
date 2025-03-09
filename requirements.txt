@@ -19,7 +19,7 @@ accelerate>=0.21.0
 
 # Specialized dependencies 
 autoawq==0.2.8  # Use this specific version that's available
-flash-attn>=2.0.0;platform_system!="Darwin"  # Optional for performance, exclude on MacOS
+#flash-attn>=2.0.0;platform_system!="Darwin"  # Optional for performance, exclude on MacOS
 
 # For error handling and utilities
 tqdm>=4.65.0
