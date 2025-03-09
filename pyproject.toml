@@ -2,7 +2,7 @@
 name = "comfyui-if_videoprompts"
 description = "ComfyUI extension for video-based prompting and processing with support for various models and video processing capabilities"
 version = "0.1.2"
-license = { file = "LICENSE.md" }
+license = { file = "MIT License" }
 dependencies = [
     "torch>=2.0.0",
     "transformers>=4.49.0",
@@ -32,7 +32,7 @@ Repository = "https://github.com/if-ai/ComfyUI-IF_VideoPrompts"
 # Used by Comfy Registry https://comfyregistry.org
 [tool.comfy]
 PublisherId = "impactframes"
-DisplayName = "video prompts"
+DisplayName = "IF_VideoPrompts"
 Icon = "https://impactframes.ai/System/Icons/48x48/if.png"
 
 [build-system]
