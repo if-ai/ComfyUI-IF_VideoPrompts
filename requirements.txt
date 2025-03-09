@@ -19,7 +19,7 @@ tokenizers>=0.15.0
 safetensors>=0.3.1
 
 # Specialized dependencies 
-# autoawq==0.2.8  # for this you need triton and reinstall trasformers after installing this
+# autoawq==0.2.8  # for this you need triton and to install it use pip install --no-deps autoawq after you install the reqs 
 #flash-attn>=2.0.0;platform_system!="Darwin"  # Optional for performance, exclude on MacOS
 triton; sys_platform == "linux"
 # triton for windows
