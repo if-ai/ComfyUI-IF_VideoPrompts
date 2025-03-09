@@ -21,9 +21,6 @@ dependencies = [
     "tqdm>=4.65.0",
     "psutil>=5.9.5",
     "packaging>=23.1",
-]
-
-[project.optional-dependencies]
     # triton for linux
     'triton; sys_platform == "linux"',
     # triton for windows
@@ -31,7 +28,8 @@ dependencies = [
     'https://github.com/woct0rdho/triton-windows/releases/download/v3.1.0-windows.post8/triton-3.1.0-cp311-cp311-win_amd64.whl; sys_platform == "win64" and (python_version >= "3.11" and python_version < "3.12")',
     'https://github.com/woct0rdho/triton-windows/releases/download/v3.1.0-windows.post8/triton-3.1.0-cp310-cp310-win_amd64.whl; sys_platform == "win64" and (python_version >= "3.10" and python_version < "3.11")',
     'https://github.com/woct0rdho/triton-windows/releases/download/v3.1.0-windows.post8/triton-3.1.0-cp38-cp38-win_amd64.whl; sys_platform == "win64" and (python_version >= "3.8" and python_version < "3.9")',
-
+]
+[project.optional-dependencies]
 #flash-attn = ["flash-attn>=2.0.0"]
 
 [project.urls]
@@ -50,3 +48,4 @@ build-backend = "setuptools.build_meta"
 # Note regarding flash-attn:
 # The flash-attn dependency is moved to optional-dependencies as it's 
 # not compatible with MacOS (Darwin) systems
+# pip install --no-deps autoawq   after installing this reqs if you have triton
