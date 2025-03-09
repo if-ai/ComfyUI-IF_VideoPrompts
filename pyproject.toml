@@ -24,7 +24,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-flash-attn = ["flash-attn>=2.0.0"]
+#flash-attn = ["flash-attn>=2.0.0"]
 
 [project.urls]
 Repository = "https://github.com/if-ai/ComfyUI-IF_VideoPrompts"
