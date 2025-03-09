@@ -64,6 +64,10 @@ pip install transformers==4.49.0
 pip install -r requirements.txt
 ```
 
+I also have precompiled wheels for FA2 sageattention and trton for windows 10 for cu126 and pytorch 2.6.3 and python 12+ https://huggingface.co/impactframes/ComfyUI_desktop_wheels_win_cp12_cu126/tree/main
+
+
+
 3. Restart ComfyUI
 
 ### Method 3: Direct pip installation
