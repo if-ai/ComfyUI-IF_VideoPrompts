@@ -1,6 +1,6 @@
 # Core dependencies
 torch>=2.0.0
-transformers>=4.49.0  # Newer version required for compatibility
+transformers  # Newer version required for compatibility
 huggingface_hub>=0.26.0
 pillow>=9.5.0
 numpy>=1.24.0
