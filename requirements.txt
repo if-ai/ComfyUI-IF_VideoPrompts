@@ -21,7 +21,13 @@ safetensors>=0.3.1
 # Specialized dependencies 
 # autoawq==0.2.8  # for this you need triton and reinstall trasformers after installing this
 #flash-attn>=2.0.0;platform_system!="Darwin"  # Optional for performance, exclude on MacOS
-
+triton; sys_platform == "linux"
+# triton for windows
+https://github.com/woct0rdho/triton-windows/releases/download/v3.1.0-windows.post8/triton-3.1.0-cp312-cp312-win_amd64.whl; sys_platform == "win64" and (python_version >= "3.12" and python_version < "3.13")
+https://github.com/woct0rdho/triton-windows/releases/download/v3.1.0-windows.post8/triton-3.1.0-cp311-cp311-win_amd64.whl; sys_platform == "win64" and (python_version >= "3.11" and python_version < "3.12")
+https://github.com/woct0rdho/triton-windows/releases/download/v3.1.0-windows.post8/triton-3.1.0-cp310-cp310-win_amd64.whl; sys_platform == "win64" and (python_version >= "3.10" and python_version < "3.11")
+https://github.com/woct0rdho/triton-windows/releases/download/v3.1.0-windows.post8/triton-3.1.0-cp38-cp38-win_amd64.whl; sys_platform == "win64" and (python_version >= "3.8" and python_version < "3.9")
+# autoawq
 # For error handling and utilities
 tqdm>=4.65.0
 psutil>=5.9.5
