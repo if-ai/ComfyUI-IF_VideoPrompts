@@ -229,8 +229,8 @@ app.registerExtension({
             }
             
             // Set node color and size
-            node.color = "#4a6d8c";
-            node.bgcolor = "#2a3d4c";
+            // node.color = "#4a6d8c";
+            // node.bgcolor = "#2a3d4c";
             
             // Set minimum size
             node.size = node.computeSize();
