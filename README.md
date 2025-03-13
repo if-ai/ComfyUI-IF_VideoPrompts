@@ -48,23 +48,16 @@ git clone https://github.com/yourusername/ComfyUI-IF_VideoPrompts.git
 
 2. Install required dependencies:
 ```bash
-# First uninstall potentially conflicting packages
-pip uninstall -y autoawq transformers
-
-# Install specific transformers version
-pip install transformers==4.49.0
 
 # Install compatible autoawq version WITHOUT dependencies to prevent transformers downgrade
 # If you want to use AWQ to save VRAM and up to 3x faster inference
 # you need to install triton and autoawq
 
-
-
 # Then install other dependencies
 pip install -r requirements.txt
 ```
 
-I also have precompiled wheels for FA2 sageattention and trton for windows 10 for cu126 and pytorch 2.6.3 and python 12+ https://huggingface.co/impactframes/ComfyUI_desktop_wheels_win_cp12_cu126/tree/main
+I also have precompiled wheels for FA2 sageattention and triton for windows 10 for cu126 and pytorch 2.6.3 and python 12+ https://huggingface.co/impactframes/ComfyUI_desktop_wheels_win_cp12_cu126/tree/main
 
 
 
@@ -75,23 +68,8 @@ I also have precompiled wheels for FA2 sageattention and trton for windows 10 fo
 If you want to install the dependencies directly with pip:
 
 ```bash
-pip install transformers==4.49.0 opencv-python decord huggingface_hub pillow torch numpy tokenizers safetensors accelerate tqdm psutil packaging
-pip install --no-deps autoawq==0.2.8
-```
-
-### Dependency Conflicts
-
-If you encounter dependency conflicts (especially with transformers and autoawq), try:
-
-```bash
-# Uninstall problematic packages
-pip uninstall -y autoawq transformers
-
-# Install specific transformers version
-pip install transformers==4.49.0
-
-# Then install autoawq WITHOUT dependencies
-pip install --no-deps autoawq==0.2.8
+pip install transformers>=4.49.0 opencv-python decord huggingface_hub pillow torch numpy tokenizers safetensors accelerate tqdm psutil packaging
+pip install --no-deps --no-build-isolation autoawq
 ```
 
 ## Usage
