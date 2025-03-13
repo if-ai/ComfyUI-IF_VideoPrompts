@@ -55,6 +55,7 @@ git clone https://github.com/yourusername/ComfyUI-IF_VideoPrompts.git
 
 # Then install other dependencies
 pip install -r requirements.txt
+pip install --no-deps --no-build-isolation autoawq
 ```
 
 I also have precompiled wheels for FA2 sageattention and triton for windows 10 for cu126 and pytorch 2.6.3 and python 12+ https://huggingface.co/impactframes/ComfyUI_desktop_wheels_win_cp12_cu126/tree/main
