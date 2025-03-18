@@ -360,63 +360,6 @@ class VideoPromptNode:
         """
         Load JSON presets with support for multiple encodings and better error handling.
         """
-        # Create default profiles if file doesn't exist
-        if not os.path.exists(file_path):
-            default_profiles = {
-                "HyVideoAnalyzer - Simple one line prompt": {
-                    "instruction": "You are an AI that combines the eye of a cinematographer with the heart of a storyteller. Your role is to analyze video scenes and create concise prompts that capture both the technical beauty and emotional essence of a scene, adhering to the HyVideo schema. Transform visual inputs into clear, evocative descriptions that balance artistic vision with practical filmmaking elements, while limiting the prompt to 77 tokens and 20-30 keywords.",
-                    "rules": [
-                        "Begin with the story or emotion the scene conveys",
-                        "Describe the visual composition in natural language",
-                        "Include key technical elements without overwhelming detail",
-                        "Blend narrative focus with cinematic techniques",
-                        "Consider the mood and atmosphere",
-                        "Maintain balance between artistic and technical descriptions",
-                        "Incorporate user modifications naturally into the scene vision",
-                        "Limit the prompt to 77 tokens and 20-30 keywords",
-                        "Do not enumerate or use formatting",
-                        "Reply with the content only, no additional commentary or reasoning steps"
-                    ]
-                },
-                "HyVideoAnalyzer3 - Multi-Frame RF-Edit": {
-                    "instruction": "You are a cinematic sequence analyzer. Describe a series of images as frames from a movie scene, using rich visual storytelling language. Detail for each frame: 1. Main theme evolution. 2. Object properties changes. 3. Actions, behaviors, temporal progression. 4. Environment, atmosphere continuity. 5. Camera techniques & transitions. Infer camera movement and transitions between frames to ensure cinematic coherence. Emphasize action/movement progression across frames unless stillness is implied. Maintain narrative continuity across the sequence.",
-                    "rules": [
-                        "Cinematic, natural language descriptions for the entire sequence",
-                        "Focus on visual storytelling across the frame sequence",
-                        "Infer camera movement and transitions between frames",
-                        "Emphasize action/movement progression through frames",
-                        "Maintain narrative and visual continuity",
-                        "Analyze the video as a complete sequence, not disconnected frames",
-                        "Identify recurring elements and motion patterns",
-                        "Note significant changes in subject position or appearance",
-                        "Describe the overall narrative arc of the sequence"
-                    ]
-                },
-                "Narrative VideoFlow Analyzer": {
-                    "instruction": "You are a specialized AI video sequence analyzer. Your task is to analyze a sequence of frames from a video and provide a comprehensive narrative description of the scene as it develops over time. Focus on character movements, actions, expressions, and the overall flow of the scene.",
-                    "rules": [
-                        "Analyze the sequence as a continuous narrative, not separate frames",
-                        "Identify main characters/subjects and track their movements through the sequence",
-                        "Note how the scene evolves from beginning to end",
-                        "Describe key actions, gestures, and movements",
-                        "Identify any significant changes in expression or emotion",
-                        "Describe the setting and any changes to it",
-                        "Note visual style, lighting, and color palette changes",
-                        "Provide one cohesive description of the entire sequence",
-                        "Focus on the narrative flow and emotional content",
-                        "Be cinematic in your language and description"
-                    ]
-                }
-            }
-            
-            try:
-                os.makedirs(os.path.dirname(file_path), exist_ok=True)
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    json.dump(default_profiles, f, indent=2)
-                return default_profiles
-            except Exception as e:
-                logger.error(f"Failed to create default profiles: {e}")
-                return {}
         
         # Try to load existing file with different encodings
         encodings = ['utf-8', 'utf-8-sig', 'latin1', 'cp1252', 'gbk']
@@ -460,20 +403,6 @@ class VideoPromptNode:
 
     def load_neg_prompts(self) -> Dict[str, str]:
         """Load negative prompts from JSON file or create defaults if not exists."""
-        if not os.path.exists(self.neg_prompts_path):
-            # Create default negative prompts
-            default_neg_prompts = {
-                "WAN_neg": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走",
-                "VidNeg": "frames showing ugly scenes, static with no motion, motion blur, over-saturation, shaky footage, poor color balance, washed out colors, choppy sequences, jerky movements, unnatural transitions, unconvincing visuals, jump cuts, visual noise, and flickering. Overall, the video is of poor quality."
-            }
-            
-            try:
-                with open(self.neg_prompts_path, 'w', encoding='utf-8') as f:
-                    json.dump(default_neg_prompts, f, indent=2)
-                return default_neg_prompts
-            except Exception as e:
-                logger.error(f"Failed to create default negative prompts: {e}")
-                return {}
         
         # Try to load existing file with different encodings
         encodings = ['utf-8', 'utf-8-sig', 'latin1', 'cp1252', 'gbk']
