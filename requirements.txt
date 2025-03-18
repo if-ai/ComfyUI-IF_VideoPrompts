@@ -2,6 +2,8 @@
 torch>=2.0.0
 transformers>=4.48.3 
 accelerate>=1.4.0
+av>=14.1.0
+qwen-vl-utils>=0.0.10
 
 huggingface_hub>=0.26.0
 pillow>=9.5.0
