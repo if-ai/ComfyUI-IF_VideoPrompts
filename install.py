@@ -63,7 +63,7 @@ def install_dependencies():
     # Install autoawq with compatible version
     print("Installing autoawq 0.2.8 with --no-deps to prevent transformers downgrade...")
     subprocess.check_call([
-        sys.executable, "-m", "pip", "install", "autoawq==0.2.8", "--no-deps", "--no-build-isolation"
+        sys.executable, "-m", "pip", "install", "autoawq==0.2.8", "--no-deps"
     ])
     
     # Install other dependencies from requirements
