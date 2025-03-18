@@ -1,7 +1,8 @@
 # Core dependencies
 torch>=2.0.0
-transformers>=4.48.3 
-accelerate>=1.4.0
+git+https://github.com/huggingface/transformers
+accelerate
+sentence-transformers
 av>=14.1.0
 decord>=0.6.0
 qwen-vl-utils[decord]
