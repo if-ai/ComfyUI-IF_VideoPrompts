@@ -1,7 +1,7 @@
 # Core dependencies
 torch>=2.0.0
-transformers  # Newer version required for compatibility
-accelerate
+transformers>=4.48.3 
+accelerate>=1.4.0
 
 huggingface_hub>=0.26.0
 pillow>=9.5.0
@@ -16,8 +16,8 @@ imageio_ffmpeg>=0.6.0
 moviepy>=2.1.2
 
 # Qwen model dependencies
-tokenizers>=0.15.0
-safetensors>=0.3.1
+tokenizers>=0.21.0
+safetensors>=0.5.1
 
 # Specialized dependencies 
 # autoawq==0.2.8  # for this you need triton and to install it use "pip install --no-deps --no-build-isolation autoawq" after you install the reqs 
